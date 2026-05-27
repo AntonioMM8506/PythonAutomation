@@ -32,3 +32,12 @@ print(or_example)
 
 not_example = not (10 > 5)
 print(not_example)
+
+
+# Order of operations: not > and > or
+print("\nOrder of operations:")
+complex_example = not (10 > 5) and (5 < 3) or (2 == 2)
+print(complex_example)
+
+bool_output = True or not False and False
+print(bool_output)
