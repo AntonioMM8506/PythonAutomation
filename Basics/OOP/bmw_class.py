@@ -16,3 +16,5 @@ class BMW(car_class.Car):
 print("\nBMW Car:")
 b1 = BMW("X5", 2020)
 b1.display_info()  # Output: 2020 BMW X5
+b1.drive()  # Output: The BMW X5 is driving smoothly.
+b1.stop()  # Output: The BMW X5 has stopped gracefully.
