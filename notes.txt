@@ -2,3 +2,9 @@ pip list => to list all available installed packages
 pip show "name of package" => shows all the information of a package
 pip uninstall "name of package"
 
+
+
+in the devTools console, for reviewing disappearing Elements
+setTimeout(function() {debugger;}, 6000);
+
+download chromedriver and gecko driver,extract them and just add the .exe to the SeleniumWDTutorial/basicweb/drivers folder
