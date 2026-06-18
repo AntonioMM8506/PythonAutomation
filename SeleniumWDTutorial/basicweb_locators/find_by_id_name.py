@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-class find_by_id_name():
+class find_elements():
     def test(self):
         baseURL = "https://www.letskodeit.com/practice"
         driver = webdriver.Chrome()
@@ -29,5 +29,14 @@ class find_by_id_name():
         if elementByCSS is not None:
             print("We found the element by CSS Selector")
 
-run_test = find_by_id_name()
+        # Only works with <a> elements
+        elementByLinkText = driver.find_element(By.LINK_TEXT, "HOME")
+        if elementByLinkText is not None:
+            print("We found the element by Link Text")
+
+        elementByPartialLinkText = driver.find_element(By.PARTIAL_LINK_TEXT, "COURSES")
+        if elementByPartialLinkText is not None:
+            print("We found the element by Partial Link Text")
+
+run_test = find_elements()
 run_test.test()
