@@ -21,5 +21,13 @@ class find_by_id_name():
         if elementByName is not None:
             print("We found the element by Name")
 
+        elemmentByXpath = driver.find_element(By.XPATH, "//input[@id='displayed-text']")
+        if elemmentByXpath is not None:
+            print("We found the element by Xpath")
+
+        elementByCSS = driver.find_element(By.CSS_SELECTOR, "#displayed-text")
+        if elementByCSS is not None:
+            print("We found the element by CSS Selector")
+
 run_test = find_by_id_name()
 run_test.test()
