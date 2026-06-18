@@ -51,5 +51,12 @@ class find_elements():
         if elementByTagName is not None:
             print("We found the element by Tag Name: " + elementByTagName.text)
 
+        elementListByClassName = driver.find_elements(By.CLASS_NAME, "inputs")
+        print("Number of elements found with Class Name 'inputs': " + str(len(elementListByClassName)))
+
+        elementListByTagName = driver.find_elements(By.TAG_NAME, "a")
+        print("Number of elements found with Tag Name 'a': " + str(len(elementListByTagName)))    
+
+
 run_test = find_elements()
 run_test.test()

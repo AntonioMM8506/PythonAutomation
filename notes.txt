@@ -21,3 +21,10 @@ How to invoke Chrome, Safaria, and IE using Selenium Webdriver?
 What are the challenges faced when running IE? 
 How to instantiate a webdriver?
 How to open a URL?
+
+Find Elements Interview Questions
+What are the different locators to find elements on a web page?
+How to find element on a web page using selenium webdriver with python?
+How to find element list on a web page using selenium webdriver with python?
+Which locator has best performance when working with selenium webdriver automation?
+Why we should not depend of class name, tag name, link text often?
