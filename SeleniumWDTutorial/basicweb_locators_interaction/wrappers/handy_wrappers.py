@@ -27,6 +27,7 @@ class HandyWrappers():
             print("Locator type " + locatorType + " not correct/supported")
         return False
 
+
     # This method is used to get a web element based on the locator and locator type provided.
     # It takes the locator and locator type as arguments and returns the corresponding web element.
     def getElement(self, locator, locatorType="id"):
@@ -38,3 +39,32 @@ class HandyWrappers():
         except:
             print("Element not found with locator: " + locator + " and locatorType: " + locatorType)
         return element
+
+
+    # This method is used to check if a web element is present based on the locator and locator type provided.
+    # It takes the locator and locator type as arguments and returns a boolean indicating whether the element is present.
+    def isElementPresent(self, locator, byType="id"):
+        try:
+            element = self.driver.find_element(byType, locator)
+            if element is not None:
+                print("Element present with locator: " + locator)
+                return True
+            else:
+                print("Element not present with locator: " + locator)
+                return False
+        except:
+            print("Element not found with locator: " + locator)
+            return False
+        
+    def areElementsPresent(self, locator, byType="id"):
+        try:
+            elements = self.driver.find_elements(byType, locator)
+            if len(elements) > 0:
+                print("Elements present with locator: " + locator)
+                return True
+            else:
+                print("Elements not present with locator: " + locator)
+                return False
+        except:
+            print("Elements not found with locator: " + locator)
+            return False
