@@ -28,6 +28,9 @@ class HandyWrappers():
         return False
 
 
+    def get_by_type(self, locatorType):
+        return self.getBYType(locatorType)
+
     # This method is used to get a web element based on the locator and locator type provided.
     # It takes the locator and locator type as arguments and returns the corresponding web element.
     def getElement(self, locator, locatorType="id"):
