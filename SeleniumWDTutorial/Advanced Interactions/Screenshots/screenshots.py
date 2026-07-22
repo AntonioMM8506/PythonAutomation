@@ -34,20 +34,23 @@ class Screenshots():
         )
         day_to_select.click()
 
-        print("Date selected successfully")
-        
-        # Take a screenshot of the current state of the page
-        # It is saved in the same directory as this script with a timestamp in the filename
+        self.take_screenshot(driver, "my_screenshot")
+    
+        time.sleep(2)
+        driver.quit()
+        # End of the test method
+
+    def take_screenshot(self, driver, filename):
+            # Take a screenshot of the current state of the page
+            # It is saved in the same directory as this script with a timestamp in the filename
         timestamp = datetime.now().strftime("%d%m%Y_%H%M")
-        screenshot_path = Path(__file__).with_name(f"screenshot_{timestamp}.png")
+        screenshot_path = Path(__file__).with_name(f"{filename}_{timestamp}.png")
         try:
             driver.save_screenshot(str(screenshot_path))
             print(f"Screenshot saved at: {screenshot_path}")
         except Exception as e:
             print(f"Error occurred while saving screenshot: {e}")
-
-        time.sleep(2)
-        driver.quit()
+        #End of the take_screenshot method
 
 ff = Screenshots()
 ff.test()
