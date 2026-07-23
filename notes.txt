@@ -22,3 +22,6 @@ pip freeze > requirements.txt
 
 To install everything from scratch: If you ever clone this repository onto a new machine, you just create a fresh .venv, activate it, and run:
 pip install -r requirements.txt
+
+To interact with the file system manager
+pip3 install pynput
