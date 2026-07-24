@@ -1,5 +1,10 @@
 # Python Selenium Study Repository
 
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
+![Selenium](https://img.shields.io/badge/Selenium-WebDriver-43B02A?logo=selenium&logoColor=white)
+![Test Automation](https://img.shields.io/badge/Test%20Automation-Practice-FF6F61)
+![Learning](https://img.shields.io/badge/Status-Study%20Repository-6A5ACD)
+
 This repository is a personal study project focused on learning Python automation and Selenium WebDriver.
 
 It is organized as a course-based practice archive, where each folder contains small exercises, examples, and notes that help reinforce the concepts being studied.
