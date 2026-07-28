@@ -1,5 +1,10 @@
-2026-07-27 20:22:48,197 - INFO - This is an info message
-2026-07-27 20:22:48,197 - DEBUG - This is a debug message
-2026-07-27 20:22:48,197 - WARNING - This is a warning message
-2026-07-27 20:22:48,197 - ERROR - This is an error message
-2026-07-27 20:22:48,197 - CRITICAL - This is a critical message
+27-07-2026 20:32:21 PM - INFO - This is an info message
+27-07-2026 20:32:21 PM - DEBUG - This is a debug message
+27-07-2026 20:32:21 PM - WARNING - This is a warning message
+27-07-2026 20:32:21 PM - ERROR - This is an error message
+27-07-2026 20:32:21 PM - CRITICAL - This is a critical message
+27-07-2026 08:32:44 PM - INFO - This is an info message
+27-07-2026 08:32:44 PM - DEBUG - This is a debug message
+27-07-2026 08:32:44 PM - WARNING - This is a warning message
+27-07-2026 08:32:44 PM - ERROR - This is an error message
+27-07-2026 08:32:44 PM - CRITICAL - This is a critical message
