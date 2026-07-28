@@ -1,0 +1,5 @@
+27-07-2026 21:35:04 - LoggerDemoConfiguration - DEBUG - DEBUG message
+27-07-2026 21:35:04 - LoggerDemoConfiguration - INFO - INFO message
+27-07-2026 21:35:04 - LoggerDemoConfiguration - WARNING - WARNING message
+27-07-2026 21:35:04 - LoggerDemoConfiguration - ERROR - ERROR message
+27-07-2026 21:35:04 - LoggerDemoConfiguration - CRITICAL - CRITICAL message

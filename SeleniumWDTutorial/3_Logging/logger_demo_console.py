@@ -1,9 +1,4 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-import time
 import logging
-
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class LoggerDemoConsole():
 
