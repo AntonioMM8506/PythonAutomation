@@ -25,3 +25,11 @@ pip install -r requirements.txt
 
 To interact with the file system manager
 pip3 install pynput
+
+
+-----
+On the Terminal be sure to run
+$env:PYTHONPATH="$env:PYTHONPATH;."
+
+on the .venv folder, look for the Activate.ps1 and add the following line at the bottom
+$env:PYTHONPATH = "$env:PYTHONPATH;$PSScriptRoot\.."
