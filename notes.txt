@@ -33,3 +33,6 @@ $env:PYTHONPATH="$env:PYTHONPATH;."
 
 on the .venv folder, look for the Activate.ps1 and add the following line at the bottom
 $env:PYTHONPATH = "$env:PYTHONPATH;$PSScriptRoot\.."
+
+
+pip3 install pytest
