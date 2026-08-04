@@ -9,10 +9,10 @@ def setUp():
     yield
     print("After Each Test")
 
-def test_methodA(setUp):
+def test_methodA(setUp, oneTimesetUp):
     print("Executing test_methodA")
 
-def test_methodB(setUp):
+def test_methodB(setUp, oneTimesetUp):
     print("Executing test_methodB")
 
 # To run all TC in a folder, you can use the following command in your terminal:

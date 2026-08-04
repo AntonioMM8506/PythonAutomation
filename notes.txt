@@ -36,3 +36,4 @@ $env:PYTHONPATH = "$env:PYTHONPATH;$PSScriptRoot\.."
 
 
 pip3 install pytest
+pip3 install pytest-ordering
