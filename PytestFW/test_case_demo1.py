@@ -15,9 +15,12 @@ def test_methodA(setUp):
 def test_methodB(setUp):
     print("Executing test_methodB")
 
+# To run all TC in a folder, you can use the following command in your terminal:
+# # pytest -v -s PytestFW/
+
 # To run the tests in this file, you can use the following command in your terminal:
 # pytest -v -s PytestFW/test_case_demo1.py
 
-# To run a particular TC
+# To run a particular test_method, you can use the following command:
 # pytest -v -s PytestFW/test_case_demo1.py::test_methodA
 # pytest -v -s PytestFW/test_case_demo1.py -k test_methodB
