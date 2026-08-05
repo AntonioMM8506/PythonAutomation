@@ -50,3 +50,9 @@ pytest -v -s PytestFW/test_case_demo1.py -k test_methodB
 
 To run using parameters
 pytest -v -s PytestFW/test_run_order_demo.py --browser firefox --osType iOS
+
+
+To generate html basic reports
+pip3 install pytest-html
+
+pytest -v -s PytestFW/test_class_demo.py --html=PytestFW/test_class_demo_report.html
