@@ -13,9 +13,9 @@ class TestClassDemo():
     # This is useful for setting up any necessary state or objects that will be 
     # used in the test methods.
     @pytest.fixture(autouse=True)
-    def setup_class(self):
+    def setup_class(self, oneTimeClassSetUp):
         print("Running setup_class")
-        self.obj = ClassToTest(10)
+        self.obj = ClassToTest(self.value) # self.value is set in the oneTimeClassSetUp fixture
 
     def test_add(self):
         result = self.obj.add(5, 3)

@@ -35,17 +35,27 @@ def oneTimesetUp(browser, osType):
 # scope Class means that the fixture will be executed only once for the entire class, 
 # not before each test method. This is useful for setup that only needs to be done once.
 @pytest.fixture(scope="class")
-def oneTimeClassSetUp(browser, osType):
+def oneTimeClassSetUp(request, browser):
     print("Running one time setup")
     
     if browser == "chrome":
+        value = 10
         print("Launching chrome browser")
     elif browser == "firefox":
+        value = 15
         print("Launching firefox browser")
     else:
+        value = 20
         print("Browser not supported")
 
     print("Running tests on OS:", osType)
+
+    # request.cls is used to access the class that is using this fixture. This allows 
+    # us to set attributes on the class that can be used in the test methods. In this 
+    # case, we are setting the value attribute on the class to the value determined by 
+    # the browser type.
+    if request.cls is not None:
+        request.cls.value = value
 
     yield
     print("Running one time teardown")
