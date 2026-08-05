@@ -32,6 +32,25 @@ def oneTimesetUp(browser, osType):
     print("Running one time teardown")
 
 
+# scope Class means that the fixture will be executed only once for the entire class, 
+# not before each test method. This is useful for setup that only needs to be done once.
+@pytest.fixture(scope="class")
+def oneTimeClassSetUp(browser, osType):
+    print("Running one time setup")
+    
+    if browser == "chrome":
+        print("Launching chrome browser")
+    elif browser == "firefox":
+        print("Launching firefox browser")
+    else:
+        print("Browser not supported")
+
+    print("Running tests on OS:", osType)
+
+    yield
+    print("Running one time teardown")
+
+
 # This function is used to add command line options to pytest. In this case, it adds a
 # "--browser" option that allows the user to specify which browser to use for testing.
 # The default value is "chrome", but the user can specify "firefox" or other browsers as needed.
