@@ -16,3 +16,10 @@ class LoginPage(SeleniumDriver):
         self.sendKeys(self._email_field_locator[1], self._email_field_locator[0], username)
         self.sendKeys(self._password_field_locator[1], self._password_field_locator[0], password)
         self.elementClick(self._login_button_locator[1], self._login_button_locator[0])
+
+    def verifyLoginSuccesful(self):
+        #userIcon = self.driver.find_element(By.ID, "dropdownMenu1")
+        return self.isElementPresent("dropdownMenu1", "id")
+
+    def verifyLoginFailed(self):
+        return self.isElementPresent("//span[contains(text(),'Incorrect login details')]", "xpath")
