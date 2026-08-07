@@ -67,22 +67,23 @@ def customLogger(loglevel):
     console_handler.setFormatter(formatter)
 
     # Create a file handler to save logs under a logs folder at the AutomationFramework package root
-    project_root = Path(__file__).resolve().parents[1]
-    logs_dir = project_root / "logs"
-    logs_dir.mkdir(exist_ok=True)
+    # !!! UNCOMMENT THE FOLLOWING LINES IF YOU WANT TO ENABLE FILE LOGGING !!!   
+    #project_root = Path(__file__).resolve().parents[1]
+    #logs_dir = project_root / "logs"
+    #logs_dir.mkdir(exist_ok=True)
 
-    safe_logger_name = "".join(ch if ch.isalnum() or ch in "-_" else "_" for ch in logger_name)
-    safe_logger_name = safe_logger_name or "default"
+    #safe_logger_name = "".join(ch if ch.isalnum() or ch in "-_" else "_" for ch in logger_name)
+    #safe_logger_name = safe_logger_name or "default"
 
-    timestamp = datetime.now().strftime("%d%m%Y-%H%M%S")
-    log_file = logs_dir / f"{safe_logger_name}_{timestamp}.log"
-    file_handler = logging.FileHandler(log_file)
-    file_handler.setLevel(numeric_level)
-    file_handler.setFormatter(formatter)
+    #timestamp = datetime.now().strftime("%d%m%Y-%H%M%S")
+    #log_file = logs_dir / f"{safe_logger_name}_{timestamp}.log"
+    #file_handler = logging.FileHandler(log_file)
+    #file_handler.setLevel(numeric_level)
+    #file_handler.setFormatter(formatter)
 
     # Add handlers to the logger
-    if not logger.handlers:
-        logger.addHandler(console_handler)
-        logger.addHandler(file_handler)
+    #if not logger.handlers:
+        #logger.addHandler(console_handler)
+        #logger.addHandler(file_handler)
 
     return logger

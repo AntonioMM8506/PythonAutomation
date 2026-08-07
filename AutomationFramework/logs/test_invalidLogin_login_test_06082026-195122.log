@@ -1,8 +1,0 @@
-2026-08-06 19:51:22,338 - test_invalidLogin_login_test - INFO - Element Found
-2026-08-06 19:51:22,467 - test_invalidLogin_login_test - INFO - Sent keys to element with locator: email locatorType: id
-2026-08-06 19:51:22,474 - test_invalidLogin_login_test - INFO - Element Found
-2026-08-06 19:51:22,527 - test_invalidLogin_login_test - INFO - Sent keys to element with locator: login-password locatorType: id
-2026-08-06 19:51:22,538 - test_invalidLogin_login_test - INFO - Element Found
-2026-08-06 19:51:22,640 - test_invalidLogin_login_test - INFO - Clicked on element with locator: login locatorType: id
-2026-08-06 19:51:22,646 - test_invalidLogin_login_test - INFO - Element Found
-2026-08-06 19:51:22,646 - test_invalidLogin_login_test - INFO - Element Found

@@ -1,6 +1,0 @@
-2026-08-06 19:30:23,146 - test_validLogin_login_test - INFO - Element Found
-2026-08-06 19:30:23,239 - test_validLogin_login_test - INFO - Sent keys to element with locator: email locatorType: id
-2026-08-06 19:30:23,244 - test_validLogin_login_test - INFO - Element Found
-2026-08-06 19:30:23,281 - test_validLogin_login_test - INFO - Sent keys to element with locator: login-password locatorType: id
-2026-08-06 19:30:23,286 - test_validLogin_login_test - INFO - Element Found
-2026-08-06 19:30:23,384 - test_validLogin_login_test - INFO - Clicked on element with locator: login locatorType: id

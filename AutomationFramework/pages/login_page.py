@@ -12,7 +12,7 @@ class LoginPage(SeleniumDriver):
     _login_button_locator = (By.ID, "login")
 
     # Transaction methods
-    def login(self, username, password):
+    def login(self, username="", password=""):
         self.sendKeys(self._email_field_locator[1], self._email_field_locator[0], username)
         self.sendKeys(self._password_field_locator[1], self._password_field_locator[0], password)
         self.elementClick(self._login_button_locator[1], self._login_button_locator[0])
