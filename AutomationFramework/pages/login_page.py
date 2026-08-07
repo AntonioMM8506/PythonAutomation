@@ -2,9 +2,12 @@ from selenium.webdriver.common.by import By
 from AutomationFramework.base.selenium_driver import SeleniumDriver
 
 class LoginPage(SeleniumDriver):
-    def __init__(self, driver):
+    path = "/login"
+
+    def __init__(self, driver, base_url):
         super().__init__(driver)
         self.driver = driver
+        self.url = f"{base_url.rstrip('/')}" + self.path
 
     # Locators
     _email_field_locator = (By.ID, "email")

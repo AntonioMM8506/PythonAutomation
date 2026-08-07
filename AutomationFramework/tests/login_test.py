@@ -1,25 +1,21 @@
-import pytest
-from selenium import webdriver
 from AutomationFramework.pages.login_page import LoginPage
 import unittest
+import pytest
 
-
+@pytest.mark.usefixtures("oneTimeSetUp", "setUp")
 class LoginTests(unittest.TestCase):
 
-    def setUp(self):
-        self.driver = webdriver.Firefox()
-        self.driver.maximize_window()
-        self.driver.implicitly_wait(3)
-        self.lp = LoginPage(self.driver)
-        self.driver.get("https://www.letskodeit.com/login")
+    @pytest.fixture(autouse=True)
+    def classSetup(self, oneTimeSetUp):
+        self.lp = LoginPage(self.driver, self.baseURL)
+        self.driver.get(self.lp.url)
 
-    def tearDown(self):
-        self.driver.quit()
-
+    @pytest.mark.run(order=2)
     def test_validLogin(self):
         self.lp.login("test@email.com", "abcabc")
         assert self.lp.verifyLoginSuccesful()
 
+    @pytest.mark.run(order=1)
     def test_invalidLogin(self):
         self.lp.login("test@email.com", "wrongpassword")
         assert self.lp.verifyLoginFailed()
