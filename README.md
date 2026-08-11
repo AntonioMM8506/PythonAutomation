@@ -5,20 +5,22 @@
 ![Test Automation](https://img.shields.io/badge/Test%20Automation-Practice-FF6F61)
 ![Learning](https://img.shields.io/badge/Status-Study%20Repository-6A5ACD)
 
-This repository is a personal study project focused on learning Python automation, Selenium WebDriver, and practical test automation concepts.
+This repository is a personal learning project focused on Python, Selenium WebDriver, and practical test automation.
 
-It is organized as a course-based practice archive, where each section contains exercises, examples, and notes that reinforce the topics being studied.
+It contains course notes, example scripts, and hands-on exercises organized by topic so the material remains easy to follow and review.
 
 ## Repository structure
 
-- Python Basics: foundational Python topics such as variables, data structures, loops, conditionals, functions, exceptions, and object-oriented programming.
-- SeleniumWDTutorial: Selenium automation examples covering browser interaction, locators, waits, frames, file uploads, and related WebDriver patterns.
-- Notes and Resources: supporting notes and study material.
+- Python Basics: foundational Python concepts such as variables, data structures, loops, conditionals, functions, exceptions, and object-oriented programming.
+- SeleniumWDTutorial: Selenium examples covering browser interaction, locators, waits, frames, file uploads, and related automation patterns.
+- PytestFW: pytest-based practice and test examples focused on automation fundamentals and test structure.
+- AutomationFramework: more advanced automation project examples and framework-style organization for learning test automation architecture.
+- Notes and Resources: supporting learning material and reference notes.
 
 ## Purpose
 
-The goal of this repository is to keep a clean, searchable collection of lessons and hands-on practice while the course progresses.
+The main goal is to keep a clean and searchable collection of lessons and practice code while the learning journey continues.
 
 ## Notes
 
-This is a study repository, so the content is intentionally practical and educational rather than production-oriented.
+This is a study repository, so the content is intentionally practical, educational, and continuously evolving.
