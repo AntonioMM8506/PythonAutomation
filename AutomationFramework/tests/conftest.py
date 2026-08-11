@@ -1,18 +1,15 @@
 import pytest
 from selenium import webdriver
 
-
 @pytest.fixture()
 def setUp():
     print("Running setup...")
     yield
     print("Running teardown...")
 
-
 @pytest.fixture(scope="session")
 def browser(request):
     return request.config.getoption("--browser")
-
 
 def pytest_addoption(parser):
     parser.addoption(
@@ -21,7 +18,6 @@ def pytest_addoption(parser):
         default="chrome",
         help="Browser to use for tests: chrome or firefox",
     )
-
 
 @pytest.fixture(scope="class")
 def oneTimeSetUp(request, browser):
