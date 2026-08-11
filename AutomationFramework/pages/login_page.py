@@ -1,7 +1,8 @@
 from selenium.webdriver.common.by import By
-from AutomationFramework.base.selenium_driver import SeleniumDriver
+from AutomationFramework.base.basepage import BasePage
 
-class LoginPage(SeleniumDriver):
+
+class LoginPage(BasePage):
     path = "/login"
 
     def __init__(self, driver, base_url):
@@ -16,13 +17,12 @@ class LoginPage(SeleniumDriver):
 
     # Transaction methods
     def login(self, username="", password=""):
-        self.sendKeys(self._email_field_locator[1], self._email_field_locator[0], username)
-        self.sendKeys(self._password_field_locator[1], self._password_field_locator[0], password)
-        self.elementClick(self._login_button_locator[1], self._login_button_locator[0])
+        self.type(self._email_field_locator[1], self._email_field_locator[0], username)
+        self.type(self._password_field_locator[1], self._password_field_locator[0], password)
+        self.click(self._login_button_locator[1], self._login_button_locator[0])
 
     def verifyLoginSuccesful(self):
-        #userIcon = self.driver.find_element(By.ID, "dropdownMenu1")
-        return self.isElementPresent("dropdownMenu1", "id")
+        return self.is_element_present("dropdownMenu1", "id")
 
     def verifyLoginFailed(self):
-        return self.isElementPresent("//span[contains(text(),'Incorrect login details')]", "xpath")
+        return self.is_element_present("//span[contains(text(),'Incorrect login details')]", "xpath")
