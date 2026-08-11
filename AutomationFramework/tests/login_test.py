@@ -21,3 +21,4 @@ class LoginTests(unittest.TestCase):
         self.lp.login("test@email.com", "wrongpassword")
         assert self.lp.verifyLoginFailed()
         assert self.lp.verifyLoginSuccesful() == False
+
