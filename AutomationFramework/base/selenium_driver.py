@@ -124,6 +124,15 @@ class SeleniumDriver():
         return element
 
 
+    def webScroll(self, direction="up"):
+        if direction == "up":
+            self.driver.execute_script("window.scrollBy(0, -1000);")
+        elif direction == "down":
+            self.driver.execute_script("window.scrollBy(0, 1000);")
+        else:
+            pass
+
+
     # This method is used to take screenshot when test fails
     def screenShot(self, resultMessage):
         fileName = resultMessage + "." + str(round(time.time() * 1000)) + ".png"
@@ -141,4 +150,3 @@ class SeleniumDriver():
         except:
             self.log.error("### Exception Occurred when taking screenshot")
             print_stack()
-            
