@@ -43,6 +43,19 @@ class SeleniumDriver():
             self.log.info("Element not found")
         return element
 
+
+    def getElementList(self, locator, locatorType="id"):
+        element = None
+        try:
+            locatorType = locatorType.lower()
+            byType = self.getByType(locatorType)
+            element = self.driver.find_elements(byType, locator)
+            self.log.info("Element list found")
+        except:
+            self.log.info("Element list not found")
+        return element
+
+
     def elementClick(self, locator, locatorType="id"):
         try:
             element = self.getElement(locator, locatorType)
@@ -51,6 +64,7 @@ class SeleniumDriver():
         except:
             self.log.info("Cannot click on the element with locator: " + locator + " locatorType: " + locatorType)
             print_stack()
+
 
     def sendKeys(self, locator, locatorType="id", value=""):
             try:
@@ -61,6 +75,7 @@ class SeleniumDriver():
             except:
                 self.log.info("Cannot send keys to the element with locator: " + locator + " locatorType: " + locatorType)
                 print_stack()
+
 
     def isElementPresent(self, locator, locatorType="id"):
         try:
@@ -75,6 +90,7 @@ class SeleniumDriver():
             self.log.info("Element not found")
             return False
 
+
     def elementPresenceCheck(self, locator, byType):
         try:
             elementList = self.driver.find_elements(byType, locator)
@@ -88,8 +104,8 @@ class SeleniumDriver():
             self.log.info("Element not found")
             return False
 
-    def waitForElement(self, locator, locatorType="id",
-                               timeout=10, pollFrequency=0.5):
+
+    def waitForElement(self, locator, locatorType="id", timeout=10, pollFrequency=0.5):
         element = None
         try:
             byType = self.getByType(locatorType)
@@ -106,6 +122,7 @@ class SeleniumDriver():
             self.log.info("Element not appeared on the web page")
             print_stack()
         return element
+
 
     # This method is used to take screenshot when test fails
     def screenShot(self, resultMessage):
@@ -124,3 +141,4 @@ class SeleniumDriver():
         except:
             self.log.error("### Exception Occurred when taking screenshot")
             print_stack()
+            
