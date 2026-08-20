@@ -32,6 +32,7 @@ class SeleniumDriver():
             self.log.info("Locator type " + locatorType + " not correct/supported")
         return False
 
+
     def getElement(self, locator, locatorType="id"):
         element = None
         try:
@@ -130,6 +131,25 @@ class SeleniumDriver():
             self.driver.execute_script("window.scrollBy(0, 1000);")
         else:
             pass
+
+    def switchToFrame(self, locator, locatorType="id"):
+        try:
+            element = self.getElement(locator, locatorType)
+            self.driver.switch_to.frame(element)
+            self.log.info("Switched to frame with locator: " + locator + " locatorType: " + locatorType)
+        except:
+            self.log.info("Cannot switch to frame with locator: " + locator + " locatorType: " + locatorType)
+            print_stack()
+            print_stack()
+
+
+    def switchToDefaultContent(self):
+        try:
+            self.driver.switch_to.default_content()
+            self.log.info("Switched to default content")
+        except:
+            self.log.info("Cannot switch to default content")
+            print_stack()
 
 
     # This method is used to take screenshot when test fails
