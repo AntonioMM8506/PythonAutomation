@@ -1,6 +1,7 @@
 import pytest
 from selenium import webdriver
 from AutomationFramework.base.selenium_driver import SeleniumDriver
+from AutomationFramework.pages.login_page import LoginPage
 
 @pytest.fixture()
 def setUp():
@@ -46,6 +47,11 @@ def oneTimeSetUp(request, browser):
     driver.maximize_window()
     driver.implicitly_wait(3)
     driver.get(baseURL)
+
+    lp = LoginPage(driver, baseURL)
+    lp.open(lp.url)
+    lp.login("test@email.com", "abcabc")
+    lp.verifyLoginSuccesful()
 
     if request.cls is not None:
         request.cls.driver = driver

@@ -6,7 +6,7 @@ import pytest
 class LoginTests(unittest.TestCase):
 
     @pytest.fixture(autouse=True)
-    def classSetup(self, oneTimeSetUp):
+    def classSetup(self):
         self.lp = LoginPage(self.driver, self.baseURL)
         self.driver.get(self.lp.url)
 

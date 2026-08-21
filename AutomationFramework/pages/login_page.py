@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 from AutomationFramework.base.basepage import BasePage
+from AutomationFramework.pages.navigation_menu import NavigationMenu
 
 
 class LoginPage(BasePage):
@@ -9,6 +10,7 @@ class LoginPage(BasePage):
         super().__init__(driver)
         self.driver = driver
         self.url = f"{base_url.rstrip('/')}" + self.path
+        self.navigation_menu = NavigationMenu(self.driver)
 
     # Locators
     _email_field_locator = (By.ID, "email")

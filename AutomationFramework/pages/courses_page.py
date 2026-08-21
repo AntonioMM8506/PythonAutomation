@@ -2,6 +2,7 @@ from AutomationFramework.base.basepage import BasePage
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from AutomationFramework.pages.navigation_menu import NavigationMenu
 
 
 class CoursesPage(BasePage):
@@ -11,6 +12,7 @@ class CoursesPage(BasePage):
     def __init__(self, driver, base_url):
         super().__init__(driver)
         self.url = f"{base_url.rstrip('/')}" + self.path
+        self.navigation_menu = NavigationMenu(self.driver)
 
     _search_box = "search-courses"
     _course = "course"

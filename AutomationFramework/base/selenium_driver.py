@@ -26,7 +26,7 @@ class SeleniumDriver():
             return By.CSS_SELECTOR
         elif locatorType == "classname":
             return By.CLASS_NAME
-        elif locatorType == "linktext":
+        elif locatorType in ("linktext", "link text"):
             return By.LINK_TEXT
         else:
             self.log.info("Locator type " + locatorType + " not correct/supported")
