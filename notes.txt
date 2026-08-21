@@ -56,3 +56,6 @@ To generate html basic reports
 pip3 install pytest-html
 
 pytest -v -s PytestFW/test_class_demo.py --html=PytestFW/test_class_demo_report.html
+
+
+pip3 install ddt
