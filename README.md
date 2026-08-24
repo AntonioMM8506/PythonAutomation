@@ -14,7 +14,7 @@ It contains course notes, example scripts, and hands-on exercises organized by t
 - Python Basics: foundational Python concepts such as variables, data structures, loops, conditionals, functions, exceptions, and object-oriented programming.
 - SeleniumWDTutorial: Selenium examples covering browser interaction, locators, waits, frames, file uploads, and related automation patterns.
 - PytestFW: pytest-based practice and test examples focused on automation fundamentals and test structure.
-- AutomationFramework: more advanced automation project examples and framework-style organization for learning test automation architecture.
+- AutomationFramework: a Selenium test framework organized around reusable page objects, shared driver helpers, pytest fixtures, and unittest-compatible test classes. It includes login and course-flow tests, data-driven enrollment scenarios using DDT and CSV data, browser selection through `--browser`, logging, and screenshots for failed tests.
 - Notes and Resources: supporting learning material and reference notes.
 
 ## Purpose
