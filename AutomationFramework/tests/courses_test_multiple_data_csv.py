@@ -8,7 +8,7 @@ from ddt import ddt, data, unpack
 
 @pytest.mark.usefixtures("oneTimeSetUp", "setUp")
 @ddt # This decorator is used to indicate that the test class will use data-driven testing.
-class CoursesTests(unittest.TestCase):
+class CoursesTestsMultipleDataCSV(unittest.TestCase):
 
     @pytest.fixture(autouse=True)
     def classSetup(self, oneTimeSetUp):
